@@ -1,2 +1,7 @@
+
 username,role,is_admin,last_login,account_type,owner,status
-admin,Admin,true,2025-09-01,user,secops,active
+alice,DevOps,false,2026-01-20,user,,active
+bob,Admin,true,2025-09-01,user,,active
+svc_backup,BackupService,false,2025-10-10,service,,active
+shared_ops,Ops,false,2026-02-01,user,teamlead,active
+
