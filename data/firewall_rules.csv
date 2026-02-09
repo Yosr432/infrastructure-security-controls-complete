@@ -1,2 +1,5 @@
 rule_id,src,dst,port,protocol,action,owner,comment,date_added
-R-001,0.0.0.0/0,10.0.0.10,22,tcp,allow,secops,temporary access,2024-01-01
+R-001,0.0.0.0/0,10.0.0.10,22,tcp,allow,,Temporary access,2024-01-01
+R-002,10.0.1.0/24,10.0.2.10,443,tcp,allow,netops,App traffic,2025-07-10
+R-003,any,any,0-65535,tcp,allow,secops,,2023-05-20
+
