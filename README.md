@@ -71,3 +71,32 @@ flowchart LR
   CTRL --> RS[risk-scenarios/*.md]
   RS --> EX[examples/*.md]
 ```
+
+This approach ensures:
+
+Framework alignment without checklist mentality
+
+Controls grounded in infrastructure reality
+
+Risks expressed in operational and business terms
+
+Threat Model (Simplified STRIDE View)
+
+The project uses a simplified STRIDE-style threat model focused on infrastructure failure modes, not application code.
+
+```mermaid
+flowchart TB
+  T[Infrastructure Assets] --> S[Spoofing\nStolen credentials]
+  T --> TAMP[Tampering\nConfig changes / drift]
+  T --> R[Repudiation\nLack of audit logs]
+  T --> I[Information Disclosure\nExposed services]
+  T --> D[Denial of Service\nUnrestricted access]
+  T --> E[Elevation of Privilege\nOverly broad IAM roles]
+
+  S --> C1[IAM Controls]
+  E --> C1
+  TAMP --> C2[Config & Change Controls]
+  I --> C3[Network Security Controls]
+  R --> C4[Logging & Monitoring Controls]
+  D --> C5[Exposure & Segmentation Controls]
+```
