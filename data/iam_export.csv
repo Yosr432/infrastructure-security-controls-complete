@@ -1,0 +1,2 @@
+username,role,is_admin,last_login,account_type,owner,status
+admin,Admin,true,2025-09-01,user,secops,active

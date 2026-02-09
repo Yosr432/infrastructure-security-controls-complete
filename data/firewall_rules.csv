@@ -1,0 +1,2 @@
+rule_id,src,dst,port,protocol,action,owner,comment,date_added
+R-001,0.0.0.0/0,10.0.0.10,22,tcp,allow,secops,temporary access,2024-01-01

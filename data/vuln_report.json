@@ -1,0 +1,10 @@
+{
+  "findings": [
+    {
+      "id": "V-001",
+      "title": "Example finding",
+      "severity": "high",
+      "asset": "example-vm"
+    }
+  ]
+}
