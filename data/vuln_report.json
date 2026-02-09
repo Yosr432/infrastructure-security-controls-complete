@@ -2,9 +2,30 @@
   "findings": [
     {
       "id": "V-001",
-      "title": "Example finding",
+      "title": "SSH allows password authentication",
       "severity": "high",
-      "asset": "example-vm"
+      "asset": "vm-app-01",
+      "evidence": "sshd_config: PasswordAuthentication yes",
+      "root_cause": "weak hardening baseline",
+      "recommendation": "Disable password authentication; enforce key-based auth."
+    },
+    {
+      "id": "V-002",
+      "title": "Exposed service to the Internet",
+      "severity": "critical",
+      "asset": "public-lb-01",
+      "evidence": "0.0.0.0/0 -> TCP 22",
+      "root_cause": "overly permissive firewall rule",
+      "recommendation": "Restrict source IPs; use VPN/bastion; add approval + expiry."
+    },
+    {
+      "id": "V-003",
+      "title": "Insufficient audit logging",
+      "severity": "medium",
+      "asset": "cloud-account",
+      "evidence": "No central audit log configured",
+      "root_cause": "missing logging requirement",
+      "recommendation": "Enable central audit logs and retention policy."
     }
   ]
 }
